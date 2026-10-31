@@ -3,8 +3,8 @@ package ru.gr05503.application;
 import ru.gr05503.domain.Calculation;
 import ru.gr05503.domain.CalculationRepository;
 import ru.gr05503.domain.FormulaParser;
-import ru.gr05503.domain.IntegrationMethod;
 import ru.gr05503.domain.Integrator;
+import ru.gr05503.ui.RealisedMethod;
 
 import java.util.List;
 import java.util.function.DoubleUnaryOperator;
@@ -20,7 +20,7 @@ public class CalculationService {
 
     // Разбирает формулу, вычисляет интеграл и сохраняет расчёт
     public Calculation calculate(String formula, double lower, double upper,
-                                 int intervals, IntegrationMethod method) {
+                                 int intervals, RealisedMethod method) {
         DoubleUnaryOperator f = parser.parse(formula);
         double result = Integrator.integrate(f, lower, upper, intervals, method);
         Calculation calculation = new Calculation(formula, lower, upper, intervals, method, result);

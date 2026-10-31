@@ -3,7 +3,7 @@ package ru.gr05503.ui;
 
 import ru.gr05503.application.CalculationService;
 import ru.gr05503.domain.Calculation;
-import ru.gr05503.domain.IntegrationMethod;
+import ru.gr05503.domain.Integration;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,7 +15,7 @@ public class CalculatorWindow extends JFrame implements CalculatorView {
     private final JTextField lowerField = new JTextField(10);
     private final JTextField upperField = new JTextField(10);
     private final JTextField intervalsField = new JTextField("100", 10);
-    private final JComboBox<IntegrationMethod> methodBox = new JComboBox<>(IntegrationMethod.values());
+    private final JComboBox<RealisedMethod> methodBox = new JComboBox<>(IntegationList.standard().toArray(new RealisedMethod[0]));
     private final JButton calculateButton = new JButton("Вычислить");
     private final JButton deleteButton = new JButton("Удалить");
     private final DefaultListModel<Calculation> listModel = new DefaultListModel<>();
@@ -91,7 +91,7 @@ public class CalculatorWindow extends JFrame implements CalculatorView {
     @Override public String getLowerText()          { return lowerField.getText(); }
     @Override public String getUpperText()          { return upperField.getText(); }
     @Override public String getIntervalsText()      { return intervalsField.getText(); }
-    @Override public IntegrationMethod getMethod()  { return (IntegrationMethod) methodBox.getSelectedItem(); }
+    @Override public RealisedMethod getMethod()  { return (RealisedMethod) methodBox.getSelectedItem(); }
     @Override public Calculation getSelected()      { return calculationList.getSelectedValue(); }
 
     @Override
