@@ -1,7 +1,5 @@
 package ru.gr05503.domain;
 
-import ru.gr05503.ui.RealisedMethod;
-
 // Один расчёт: входные параметры и полученный ответ
 public class Calculation {
     private final String formula;           // формула f(x), как её ввёл пользователь

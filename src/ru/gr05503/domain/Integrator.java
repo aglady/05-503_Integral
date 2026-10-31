@@ -1,7 +1,5 @@
 package ru.gr05503.domain;
 
-import ru.gr05503.ui.RealisedMethod;
-
 import java.util.function.DoubleUnaryOperator;
 
 // Численное вычисление определённого интеграла на отрезке [a; b] разбиением на n отрезков

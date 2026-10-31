@@ -3,7 +3,8 @@ package ru.gr05503.ui;
 
 import ru.gr05503.application.CalculationService;
 import ru.gr05503.domain.Calculation;
-import ru.gr05503.domain.Integration;
+import ru.gr05503.domain.IntegationList;
+import ru.gr05503.domain.RealisedMethod;
 
 import javax.swing.*;
 import java.awt.*;

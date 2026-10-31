@@ -4,7 +4,7 @@ import ru.gr05503.domain.Calculation;
 import ru.gr05503.domain.CalculationRepository;
 import ru.gr05503.domain.FormulaParser;
 import ru.gr05503.domain.Integrator;
-import ru.gr05503.ui.RealisedMethod;
+import ru.gr05503.domain.RealisedMethod;
 
 import java.util.List;
 import java.util.function.DoubleUnaryOperator;
